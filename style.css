@@ -1,0 +1,513 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+/* Ripple Effect with Wave Glow */
+
+a.logo {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Hide overflow from ripple effect */
+}
+
+/* Logo image transition */
+a.logo img {
+    transition: 1s ease;
+}
+
+a.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Add ripple animation when hovering */
+a.logo:hover img {
+    animation: rippleGlow 1.2s ease-out infinite;
+}
+
+/* Optional: Add a circle ripple effect animation */
+a.logo::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1.05);
+    animation: rippleEffect 2s ease-out infinite;
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+a {
+    
+    color: #809E83;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    color: #809E83;
+}
+
+.header_section {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px; /* Bottom corners rounded */
+    border: 2px solid #809E83; /* Add border width, style, and color */
+    margin-bottom: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 7.5rem;
+}
+
+.nav-link {
+    display: inline-block; /* Required for transform to work */
+    font-family: 'Lancelot';
+    font-size: 28px;
+    color: #809E83;
+    font-weight: 500;
+    padding: 0.2rem 1rem; /* Corrected padding syntax */
+    transition: transform 0.3s, color 0.3s ease-in-out; /* Added transform to transition */
+}
+
+.nav-link:hover {
+    color: #FBA6A6; /* Change color on hover */
+    transform: scale(1.1); /* Enlarge the element */
+}
+
+/* Dropdown menu styles */
+
+.nav-item {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.submenu-item {
+    padding: 0.5rem 1rem;
+}
+
+.submenu-link {
+    color: #FBA6A6;
+    font-size: 0.9rem;
+    transition: transform 0.3s, color 0.3s ease-in-out;
+}
+
+.nav-item:hover .submenu {
+    display: block;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+
+
+/* General Styles */
+
+
+/* Section 1 */
+.section1 {
+    font-family: 'Hepta Slab';
+    font-size: 28px;
+    position: relative; /* Changed from absolute to relative */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.section1-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps the background image behind the text */
+}
+
+.section1-background img {
+    width: 90%;
+    height: auto;
+    object-fit: cover; 
+    padding-left: 70px;
+}
+
+.section1-content {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transform: translate(-50%, -50%); /* Centers the content */
+    text-align: left;
+    padding: 0 20px; /* Add padding for small screen devices */
+    max-width: 80%; /* Prevent the content from becoming too wide */
+}
+
+
+
+
+/* Section Titles with Gradient and Background Clip */
+.section-title, .section-description {
+    font-family: 'Elsie Swash Caps', sans-serif;
+    font-size: 72px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #C3B3B9, #715D64); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text for WebKit browsers */
+    background-clip: text; /* Standard property for compatibility */
+    color: transparent; /* Make text transparent so gradient shows through */
+}
+
+.section-description {
+    font-family: 'Elsie Swash Caps', sans-serif;
+    font-size: 44px;
+    margin: -20px 0 20px 600px;
+    background-image: linear-gradient(to right, #715D64, #676177); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text for WebKit browsers */
+    background-clip: text; /* Standard property for compatibility */
+    color: transparent; /* Make text transparent so gradient shows through */
+}
+
+.section-description-2 {
+    font-family: 'Hepta Slab';
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+/* Section 2 */
+.section2 {
+    position: relative; /* Ensure section2 is positioned relatively */
+    margin-top: -20px; /* Adds space between section1 and section2 */
+    display: flex;
+    justify-content: center; /* Centers the section horizontally */
+    align-items: center; /* Centers the section vertically */
+    height: 100vh; /* Ensures full screen height */
+}
+
+.section2-content {
+    display: grid; /* Using grid to position the 5 divs */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on the top row */
+    grid-template-rows: auto auto; /* 2 rows in total (top and bottom) */
+    gap: 20px; /* Adds space between the divs */
+    width: 80%; /* Adjust the width of the content */
+    max-width: 1200px; /* Maximum width of content */
+    font-family: 'Hepta Slab';
+    font-weight: 200;
+}
+
+.section2-1 {
+    background-color: #D9D9D9;
+}
+.section2-1-title {
+    color: #D39B9B;
+}
+
+.section2-2 {
+    background-color: #ffffff;
+    border: 2px solid  #D39B9B;
+   
+}
+
+.section2-2-title {
+    color: #809E83;
+}
+
+.section2-3 {
+    background-color: #E2ADAD;
+    color: white;
+}
+.section2-3-title{
+    color: #81656D;
+}
+
+
+.section2-4 {
+    background-color: #ffffff;
+    border: 2px solid black; 
+}
+.section2-5 {
+    background-color: #809E83;
+    color: white;
+}
+.section2-5-title {
+    color: #4B5843;
+}
+
+
+
+.section2-1,
+.section2-2,
+.section2-3,
+.section2-4,
+.section2-5 {
+    border-radius: 40px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for better visibility */
+}
+
+
+.section2-title {
+    font-weight: 300;
+    font-size: 52px;
+    letter-spacing: 5px;
+    color: #809E83;
+    line-height: 80px;
+    margin: 2;
+}
+/* Titles and text styles */
+.section2-1-title,
+.section2-2-title,
+.section2-3-title,
+.section2-4-title,
+.section2-5-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Lancelot';
+    margin-bottom: 10px;
+}
+
+.section2-1-text,
+.section2-2-text,
+.section2-3-text,
+.section2-4-text,
+.section2-5-text {
+    font-size: 16px;
+    max-width: 300px;
+    padding-left: 20px;
+    line-height: 28px;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .section2-content {
+        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+    }
+
+    .section2-1,
+    .section2-2,
+    .section2-3,
+    .section2-4,
+    .section2-5 {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* section3 styles*/
+.section3 {
+    padding: 50px 0px;
+    text-align: center;
+    background-color: #f7f7f7; /* Light background color */
+}
+
+.section3-title {
+    font-family:'Hepta Slab';
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-size: 54px;
+    color: #82898B;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Container for the two bestsellers */
+.section3-container {
+    display: flex;
+    justify-content: center; /* Space items horizontally */
+    align-items: center;
+    gap:30px;
+}
+
+/* Bestseller Item Styles */
+.bestseller1, .bestseller2 {
+    width: 40%; /* Width of each bestseller box */
+    background-color: #fff;
+    border-radius: 40px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on bestseller boxes */
+.bestseller1:hover, .bestseller2:hover {
+    transform: translateY(-10px); /* Lift the box on hover */
+}
+
+/* Image Styling */
+.bestseller1-img img, .bestseller2-img img {
+    width: 100%; /* Make images take full width */
+}
+
+/* Bestseller Text */
+.product-text {
+   margin: 0 0 15px 25px;
+   text-align: left;
+}
+
+.product-title {
+    font-size: 34px;
+    font-family: 'Elsie Swash Caps';
+    color: #8DA389;
+}
+
+.description {
+    font-family: 'Lancelot';
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    color: #707070;
+}
+
+.bestseller1-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* "See More" section */
+.product-more {
+    display: flex;
+    flex-direction: column;         /* Align items vertically first */
+    align-items: center;            /* Center items horizontally */
+    margin-top: 35px;
+    width: 150px;
+    gap: 25px;                      /* Space between heart, cart icons, and see more section */
+}
+
+/* Icons for heart and cart */
+.product-more-icons {
+    display: flex;
+    justify-content: space-around;  /* Space out heart and cart icons */
+    width: 120px;                    /* Ensures icons fill the container */
+}
+
+/* "See More" section aligned horizontally with the arrow icon */
+/* Hover effect for the See More button */
+.product-seemore:hover {
+    transform: scale(1.1); /* Increase size when hovered */
+    animation: waveLight 1.5s ease-in-out infinite; /* Apply wave-like light effect */
+    border: 2px solid #C6A7B2; /* Add border on hover */
+}
+
+/* Wavelike light effect */
+@keyframes waveLight {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle glow at start */
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(200, 167, 178, 0.7); /* Stronger glow in the middle */
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Reset to subtle glow */
+    }
+}
+
+/* Keep original layout styles */
+.product-seemore {
+    display: flex;
+    flex-direction: row;            /* Align "See More" and the arrow horizontally */
+    justify-content: center;        /* Center items horizontally */
+    align-items: center;            /* Center items vertically */
+    gap: 10px;                      /* Space between the text and the arrow icon */
+    padding: 5px 5px;
+    border-radius: 25px;
+    border: 2px solid transparent;  /* Initially no border, border becomes visible on hover */
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transitions */
+}
+
+/* Styling for the text and arrow icon */
+.product-seemore p{
+    font-family: 'Lancelot';
+    font-size: 24px;
+    font-weight: 300;
+    color: #e5bfc7;
+    margin: 0;
+}
+
+.product-seemore img{
+    width: 20px; /* Adjust the size of the arrow icon */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .section3-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    .bestseller1, .bestseller2 {
+        width: 80%; /* Make each box 80% width on small screens */
+    }
+}
+
+
+/* Heading style */
+.section4-title {
+    font-family: 'Hepta Slab', sans-serif; /* Use 'Hepta Slab' font */
+    font-weight: 300; /* Light weight */
+    font-size: 48px; /* Adjust font size to your liking */
+    text-align: center;
+    position: relative; /* To position the layers */
+    display: inline-block; /* Make it behave like a block for positioning */
+    color: transparent; /* Make the text transparent to show both layers */
+    margin-left: 80px;
+}
+
+/* Yellow layer */
+.section4-title::before {
+    content: 'NEWLY ADDED'; /* Same text as the heading */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(255, 204, 0); /* Yellow color */
+    z-index: 1; /* Position it below the black text */
+    transform-origin: center; /* Ensure rotation is from the center */
+}
+
+/* Black layer */
+.section4-title::after {
+    content: 'NEWLY ADDED'; /* Same text as the heading */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black; /* Black color */
+    z-index: 2; /* Position it above the yellow text */
+    transform: rotate(-5deg); /* Rotate to make it diagonal */
+    transform-origin: center; /* Ensure rotation is from the center */
+}
+
+
