@@ -37,3 +37,47 @@ $navbar1 = [
     ],
     
 ];
+
+// Array of products
+$products = [
+    [
+        'img' => 'images/body-lotion.png',
+        'title' => 'Body Lotion',
+        'description' => 'For Dry Skin',
+    ],
+    [
+        'img' => 'images/cream-cleanser.png',
+        'title' => 'Cream Gel Cleanser',
+        'description' => 'For Very Dry And Dehydrated Skin',
+    ],
+    [
+        'img' => 'images/serum.png',
+        'title' => 'Serum',
+        'description' => 'Anti-Aging',
+    ],
+    [
+        'img' => 'images/hand-cream.png',
+        'title' => 'Hand Cream',
+        'description' => 'For Dry Skin',
+    ],
+    [
+        'img' => 'images/cleansing-foam.png',
+        'title' => 'Cleansing Foam',
+        'description' => 'For Oily Skin',
+    ],
+    [
+        'img' => 'images/body-wash.png',
+        'title' => 'Body Wash',
+        'description' => 'For Dry Skin',
+    ],
+    [
+        'img' => 'images/body-scrub.png',
+        'title' => 'Body Scrub',
+        'description' => 'For Normal Skin',
+    ],
+    [
+        'img' => 'images/face-cream-gel.png',
+        'title' => 'Face Cream-Gel',
+        'description' => 'For Extra Dry Skin',
+    ]
+];

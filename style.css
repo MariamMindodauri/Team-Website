@@ -3,15 +3,13 @@ body {
     padding: 0;
     background-color: rgb(255, 255, 255);
 }
-/* Ripple Effect with Wave Glow */
 
 a.logo {
     position: relative;
     display: inline-block;
-    overflow: hidden; /* Hide overflow from ripple effect */
+    overflow: hidden; 
 }
 
-/* Logo image transition */
 a.logo img {
     transition: 1s ease;
 }
@@ -20,12 +18,10 @@ a.logo:hover {
     transform: scale(1.05);
 }
 
-/* Add ripple animation when hovering */
 a.logo:hover img {
     animation: rippleGlow 1.2s ease-out infinite;
 }
 
-/* Optional: Add a circle ripple effect animation */
 a.logo::after {
     content: '';
     position: absolute;
@@ -51,8 +47,7 @@ a.logo::after {
 }
 
 
-a {
-    
+a { 
     color: #809E83;
     text-decoration: none;
 }
@@ -65,8 +60,8 @@ ul {
 .header_section {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 20px 20px; /* Bottom corners rounded */
-    border: 2px solid #809E83; /* Add border width, style, and color */
+    border-radius: 0 0 20px 20px; 
+    border: 2px solid #809E83;
     margin-bottom: 50px;
 }
 
@@ -84,21 +79,20 @@ ul {
 }
 
 .nav-link {
-    display: inline-block; /* Required for transform to work */
+    display: inline-block; 
     font-family: 'Lancelot';
     font-size: 28px;
     color: #809E83;
     font-weight: 500;
-    padding: 0.2rem 1rem; /* Corrected padding syntax */
-    transition: transform 0.3s, color 0.3s ease-in-out; /* Added transform to transition */
+    padding: 0.2rem 1rem;
+    transition: transform 0.3s, color 0.3s ease-in-out; 
 }
 
 .nav-link:hover {
-    color: #FBA6A6; /* Change color on hover */
-    transform: scale(1.1); /* Enlarge the element */
+    color: #FBA6A6; 
+    transform: scale(1.1);
 }
 
-/* Dropdown menu styles */
 
 .nav-item {
     position: relative;
@@ -129,7 +123,6 @@ ul {
     display: block;
 }
 
-/* Responsive styles */
 
 @media (max-width: 768px) {
     .navbar {
@@ -137,18 +130,13 @@ ul {
     }
 }
 
-
-
-/* General Styles */
-
-
 /* Section 1 */
 .section1 {
     font-family: 'Hepta Slab';
     font-size: 28px;
-    position: relative; /* Changed from absolute to relative */
+    position: relative; 
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     overflow: hidden;
     margin-top: 70px;
 }
@@ -157,7 +145,7 @@ ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Keeps the background image behind the text */
+    z-index: -1;
 }
 
 .section1-background img {
@@ -171,35 +159,31 @@ ul {
     position: absolute;
     top: 45%;
     left: 35%;
-    transform: translate(-50%, -50%); /* Centers the content */
+    transform: translate(-50%, -50%);
     text-align: left;
-    padding: 0 20px; /* Add padding for small screen devices */
-    max-width: 80%; /* Prevent the content from becoming too wide */
+    padding: 0 20px;
+    max-width: 80%;
 }
 
-
-
-
-/* Section Titles with Gradient and Background Clip */
 .section-title, .section-description {
     font-family: 'Elsie Swash Caps', sans-serif;
     font-size: 72px;
     margin: 10px 0;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #C3B3B9, #715D64); /* Gradient colors */
-    -webkit-background-clip: text; /* Clip the background to the text for WebKit browsers */
-    background-clip: text; /* Standard property for compatibility */
-    color: transparent; /* Make text transparent so gradient shows through */
+    background-image: linear-gradient(to right, #C3B3B9, #715D64); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
 }
 
 .section-description {
     font-family: 'Elsie Swash Caps', sans-serif;
     font-size: 44px;
     margin: -20px 0 20px 600px;
-    background-image: linear-gradient(to right, #715D64, #676177); /* Gradient colors */
-    -webkit-background-clip: text; /* Clip the background to the text for WebKit browsers */
-    background-clip: text; /* Standard property for compatibility */
-    color: transparent; /* Make text transparent so gradient shows through */
+    background-image: linear-gradient(to right, #715D64, #676177); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
 }
 
 .section-description-2 {
@@ -210,21 +194,21 @@ ul {
 
 /* Section 2 */
 .section2 {
-    position: relative; /* Ensure section2 is positioned relatively */
-    margin-top: -20px; /* Adds space between section1 and section2 */
+    position: relative; 
+    margin-top: -20px; 
     display: flex;
-    justify-content: center; /* Centers the section horizontally */
-    align-items: center; /* Centers the section vertically */
-    height: 100vh; /* Ensures full screen height */
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
 }
 
 .section2-content {
-    display: grid; /* Using grid to position the 5 divs */
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on the top row */
-    grid-template-rows: auto auto; /* 2 rows in total (top and bottom) */
-    gap: 20px; /* Adds space between the divs */
-    width: 80%; /* Adjust the width of the content */
-    max-width: 1200px; /* Maximum width of content */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto auto;
+    gap: 20px; 
+    width: 80%;
+    max-width: 1200px; 
     font-family: 'Hepta Slab';
     font-weight: 200;
 }
@@ -274,10 +258,10 @@ ul {
 .section2-3,
 .section2-4,
 .section2-5 {
-    border-radius: 40px; /* Rounded corners */
+    border-radius: 40px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -312,10 +296,9 @@ ul {
     line-height: 28px;
 }
 
-/* Adjust for small screens */
 @media (max-width: 768px) {
     .section2-content {
-        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+        grid-template-columns: 1fr 1fr; 
     }
 
     .section2-1,
@@ -323,191 +306,224 @@ ul {
     .section2-3,
     .section2-4,
     .section2-5 {
-        padding: 15px; /* Reduce padding for smaller screens */
+        padding: 15px; 
     }
 }
 
-/* section3 styles*/
-.section3 {
-    padding: 50px 0px;
-    text-align: center;
-    background-color: #f7f7f7; /* Light background color */
-}
-
-.section3-title {
-    font-family:'Hepta Slab';
-    font-weight: 300;
-    letter-spacing: 5px;
-    font-size: 54px;
-    color: #82898B;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
-/* Container for the two bestsellers */
-.section3-container {
-    display: flex;
-    justify-content: center; /* Space items horizontally */
-    align-items: center;
-    gap:30px;
-}
-
-/* Bestseller Item Styles */
-.bestseller1, .bestseller2 {
-    width: 40%; /* Width of each bestseller box */
+.product {
+    min-width: 610px;
+    height: auto;
+    box-shadow: #4B5843;
+    margin: 20px;
+    height: auto;
     background-color: #fff;
-    border-radius: 40px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 42px; 
+    box-shadow: 0 4px 8px rgba(75, 88, 67, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #C6A7B2;
+    padding: 0;
 }
 
-/* Hover effect on bestseller boxes */
-.bestseller1:hover, .bestseller2:hover {
-    transform: translateY(-10px); /* Lift the box on hover */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(75, 88, 67, 0.5);
 }
 
-/* Image Styling */
-.bestseller1-img img, .bestseller2-img img {
-    width: 100%; /* Make images take full width */
-}
-
-/* Bestseller Text */
-.product-text {
-   margin: 0 0 15px 25px;
-   text-align: left;
-}
-
-.product-title {
-    font-size: 34px;
-    font-family: 'Elsie Swash Caps';
-    color: #8DA389;
-}
-
-.description {
-    font-family: 'Lancelot';
-    letter-spacing: 1.5px;
-    font-size: 24px;
-    color: #707070;
-}
-
-.bestseller1-bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* "See More" section */
-.product-more {
-    display: flex;
-    flex-direction: column;         /* Align items vertically first */
-    align-items: center;            /* Center items horizontally */
-    margin-top: 35px;
-    width: 150px;
-    gap: 25px;                      /* Space between heart, cart icons, and see more section */
-}
-
-/* Icons for heart and cart */
-.product-more-icons {
-    display: flex;
-    justify-content: space-around;  /* Space out heart and cart icons */
-    width: 120px;                    /* Ensures icons fill the container */
-}
-
-/* "See More" section aligned horizontally with the arrow icon */
-/* Hover effect for the See More button */
-.product-seemore:hover {
-    transform: scale(1.1); /* Increase size when hovered */
-    animation: waveLight 1.5s ease-in-out infinite; /* Apply wave-like light effect */
-    border: 2px solid #C6A7B2; /* Add border on hover */
-}
-
-/* Wavelike light effect */
-@keyframes waveLight {
-    0% {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle glow at start */
-    }
-    50% {
-        box-shadow: 0 0 15px rgba(200, 167, 178, 0.7); /* Stronger glow in the middle */
-    }
-    100% {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Reset to subtle glow */
-    }
-}
-
-/* Keep original layout styles */
-.product-seemore {
-    display: flex;
-    flex-direction: row;            /* Align "See More" and the arrow horizontally */
-    justify-content: center;        /* Center items horizontally */
-    align-items: center;            /* Center items vertically */
-    gap: 10px;                      /* Space between the text and the arrow icon */
-    padding: 5px 5px;
-    border-radius: 25px;
-    border: 2px solid transparent;  /* Initially no border, border becomes visible on hover */
-    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transitions */
-}
-
-/* Styling for the text and arrow icon */
-.product-seemore p{
-    font-family: 'Lancelot';
-    font-size: 24px;
-    font-weight: 300;
-    color: #e5bfc7;
+/* Product Image Styling */
+.product-img {
     margin: 0;
 }
 
-.product-seemore img{
-    width: 20px; /* Adjust the size of the arrow icon */
+.product-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px 40px 0 0; 
+}
+
+/* Title Section */
+.product-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 0 25px;
+}
+
+.product-top h2 {
+    font-family: 'Elsie Swash Caps';
+    font-size: 32px;
+    font-weight: 600;
+    color: #8DA389;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.icons img {
+    width: 34px;
+    height: auto;
+    cursor: pointer;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px 15px 25px;
+}
+
+.product-bottom p {
+    font-size: 24px;
+    color: #707070; 
+    font-family: 'Lancelot', serif;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.see-more {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding: 10px 5px 10px 25px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.see-more:hover {
+    transform: scale(1.1);
+}
+
+.see-more:hover span,
+.see-more:hover img {
+    animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1); 
+        opacity: 0.8; 
+    }
+}
+
+.see-more span {
+    font-size: 24px;
+    color: #DCABAB; /* Text color stays the same */
+    font-family: 'Lancelot', serif;
+    margin-right: 0px;
+}
+
+.see-more img {
+    width: 26px;
+    height: auto;
+}
+
+/* Section 3 and Section 4 */
+.section3-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300;
+    font-size: 65px;
+    letter-spacing: 2px;
+    color: #82898B;
+    margin-bottom: 30px;
+}
+
+.section3-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .section3-container {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center;
-    }
-
-    .bestseller1, .bestseller2 {
-        width: 80%; /* Make each box 80% width on small screens */
-    }
-}
-
-
-/* Heading style */
 .section4-title {
-    font-family: 'Hepta Slab', sans-serif; /* Use 'Hepta Slab' font */
-    font-weight: 300; /* Light weight */
-    font-size: 48px; /* Adjust font size to your liking */
+    font-family: 'Hepta Slab', sans-serif;
+    font-weight: 300;
+    font-size: 68px; 
     text-align: center;
-    position: relative; /* To position the layers */
-    display: inline-block; /* Make it behave like a block for positioning */
-    color: transparent; /* Make the text transparent to show both layers */
-    margin-left: 80px;
+    position: relative;
+    display: inline-block; 
+    color: transparent; 
+    margin-left: 200px;
+    margin-top: 120px;
+    margin-bottom: 50px ;
+
 }
 
-/* Yellow layer */
 .section4-title::before {
-    content: 'NEWLY ADDED'; /* Same text as the heading */
+    content: 'NEWLY ADDED';
     position: absolute;
     top: 0;
     left: 0;
-    color: rgb(255, 204, 0); /* Yellow color */
-    z-index: 1; /* Position it below the black text */
-    transform-origin: center; /* Ensure rotation is from the center */
+    color: rgb(255, 204, 0);
+    z-index: 1;
+    transform-origin: center;
 }
 
-/* Black layer */
 .section4-title::after {
-    content: 'NEWLY ADDED'; /* Same text as the heading */
+    content: 'NEWLY ADDED'; 
     position: absolute;
     top: 0;
     left: 0;
-    color: black; /* Black color */
-    z-index: 2; /* Position it above the yellow text */
-    transform: rotate(-5deg); /* Rotate to make it diagonal */
-    transform-origin: center; /* Ensure rotation is from the center */
+    color: black; 
+    z-index: 2;
+    transform: rotate(-5deg);
+    transform-origin: center; 
 }
 
+.section4-up, .section4-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.section4-serum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+    margin-right: 10px;
+}
+
+.section4-cream {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse; 
+    margin-right: 5px;
+}
+
+.section4-image {
+    max-height: 551px;
+    width: auto;
+    margin-right: 20px;  
+    margin-left: 30px;
+}
+
+.section4-serum, .section4-cream {
+    margin-bottom: 20px;
+}
+
+.section4-serum img, .section4-cream img {
+    margin-bottom: 10px;
+}
