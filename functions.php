@@ -170,7 +170,7 @@ function renderProduct($product) {
     echo '<div class="product-bottom">';
     echo '<p>' . $product['description'] . '</p>';
     echo '<div class="see-more">';
-    echo '<span>see more  <i class="bx bx-right-arrow-alt"></i></span>';
+    echo '<span>see more <i class="bx bx-right-arrow-alt"></i></span>';
     // echo '<img src="images/arrow.png" alt="Arrow Icon">';
     echo '</div>';
     echo '</div>';
@@ -226,5 +226,72 @@ foreach ($GLOBALS['products'] as $product) {
 echo '    </div>';  
 echo '</div>';
 
-
 }
+
+
+//Section Five
+function section5() {
+    echo '<section>';
+    echo '<div class="section5">';
+    echo '<div class="section5-header">';
+    echo '<img src="images/scrab-texture.png" alt="">';
+    echo '<h1>WEEKLY SKINCARE TIPS FROM EXPERTS</h1>';
+    echo '</div>';
+    echo '<div class="section5-data">';
+    echo '<div class="section5-img">';
+    echo '<img src="images/third-girl.png" alt="">';
+    echo '</div>';
+    echo '<div class="section5-content">';
+    echo '<div class="correct-1">';
+    echo '<h2>CORRECT USE OF SERUM</h2>';
+    echo '<img src="images/cream-texture-1.png" alt="">';
+    echo '</div>';
+    echo '<div class="correct-1-content">';
+    echo '<p>Apply serum on clean, slightly damp skin for better absorption. Use a few drops, gently patting into your skin without rubbing. Follow with moisturizer to seal it in. Common mistakes include using too much product, skipping moisturizer, and layering incompatible products. Always patch-test and avoid mixing strong actives unless advised.</p>';
+    echo '<img src="images/hands1.png" alt="">';
+    echo '</div>';
+    echo '<div class="correct-2">';
+    echo '<img src="images/cream-texture-2.png" alt="">';
+    echo '<h2>CORRECT USE OF BODY SCRUB</h2>';
+    echo '</div>';
+    echo '<div class="correct-2-content">';
+    echo '<p>Use body scrubs 1-2 times weekly to exfoliate dead skin, improve texture, and boost circulation. Avoid harsh scrubs on sensitive or inflamed areas. Apply on damp skin with gentle, circular motions. Rinse thoroughly, then moisturise to lock in hydration. Choose scrubs suited to your skin type for best results and avoid these mistakes: Over-exfoliating, Using scrub on dry skin, Scrubbing sensitive areas, Skipping moisturiser, Using harsh scrubs.</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</section>'; 
+}
+
+
+
+
+// Footer Section 
+function setFooter() {
+    echo '<footer>';
+    echo '<div class="footer">';
+        echo '<div class="footer-up">';
+    echo '<div class="logo">';
+    echo '<a href="#"><img src="images/logo.png" alt=""></a>';
+    echo '</div>';
+    echo '<div class="footer-nav">';
+    echo '<a href="#">ABOUT US</a>';
+    echo '<a href="#">SHIPPING INFO</a>';
+    echo '<a href="#">JOIN US</a>';
+    echo '</div>';
+    echo '<div class="footer-icons">';
+    echo '<a href="#"><img src="images/insta-icon.png" alt=""></a>';
+    echo '<a href="#"><img src="images/tiktok-icon.png" alt=""></a>';
+    echo '<a href="#"><img src="images/facebook-icon.png" alt=""></a>';
+    echo '</div>';
+    echo '</div>';
+        echo '<div class="footer-description">';
+    echo '<hr style="border: 1px solid black; width: 364px; margin: 0 auto;">';
+    echo '<p>© ' . date('Y') . '. Radiant Roots. By Mariam Mindodauri and Giorgi Baramidze.</p>';
+    echo '</div>';
+    
+    echo '</div>';
+    echo '</footer>';
+}
+?>
+
