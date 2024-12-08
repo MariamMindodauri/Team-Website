@@ -311,7 +311,7 @@ ul {
 }
 
 .product {
-    min-width: 610px;
+    width: 610px;
     height: auto;
     box-shadow: #4B5843;
     margin: 20px;
@@ -427,6 +427,9 @@ ul {
     color: #DCABAB; /* Text color stays the same */
     font-family: 'Lancelot', serif;
     margin-right: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .see-more img {
@@ -526,4 +529,19 @@ ul {
 
 .section4-serum img, .section4-cream img {
     margin-bottom: 10px;
+}
+
+.catalogue {
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    margin-top: 30px;         
+}
+
+.catalogue-container {
+    display: grid;             
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;                 
+    justify-items: center;     
+    align-items: start;      
 }

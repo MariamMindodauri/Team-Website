@@ -1,5 +1,10 @@
 <?php
+session_start(); 
 
+// Check if the user is logged in
+$logged_in = isset($_SESSION['user_name']) && isset($_SESSION['user_last_name']);
+
+// If logged in, greet the user, else show the login/signup options
 $navbar1 = [
     [
         'name' => 'logo',
@@ -16,7 +21,12 @@ $navbar1 = [
     [
         'name' => 'ACCOUNT',
         'link' => './account.php',
-        'submenu' => [
+        'submenu' => $logged_in ? [
+            [
+                'name' => 'Logout',
+                'link' => './logout.php',
+            ]
+        ] : [
             [
                 'name' => 'Login',
                 'link' => './login.php',
@@ -32,12 +42,10 @@ $navbar1 = [
         'link' => './favorites.php',
     ],
     [
-       'name' => 'CART',
+        'name' => 'CART',
         'link' => './cart.php', 
     ],
-    
 ];
-
 // Array of products
 $products = [
     [

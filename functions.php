@@ -112,7 +112,7 @@ function setheader($navbar1) {
 }
 
 // Section 1
-function section1($section1) {
+function section1() {
     echo '<section class="section1">';
     echo '<div class="section1-background">';
     echo '<img src="images/section-one-background.png" alt="">';
@@ -127,7 +127,7 @@ function section1($section1) {
 }
 
 // Section 2
-function section2($section2) {
+function section2() {
     echo '<section class="section2">';
     echo '<div class="section2-content">';
     echo '<h1 class="section2-title">>>REASONS TO SHOP >></h1>';
@@ -170,8 +170,8 @@ function renderProduct($product) {
     echo '<div class="product-bottom">';
     echo '<p>' . $product['description'] . '</p>';
     echo '<div class="see-more">';
-    echo '<span>see more</span>';
-    echo '<img src="images/arrow.png" alt="Arrow Icon">';
+    echo '<span>see more  <i class="bx bx-right-arrow-alt"></i></span>';
+    // echo '<img src="images/arrow.png" alt="Arrow Icon">';
     echo '</div>';
     echo '</div>';
     echo '</div>';
@@ -199,7 +199,7 @@ function section3() {
 // Section 4
 function section4() {
 echo '<section class="section4-title">NEW ARRIVALS</section>';
-
+echo '<img src="images/section4-line.png" alt="" class="">';
 echo '<div class="section4-up">';
 echo '    <div class="section4-serum">';
 echo '        <img src="images/first-girl.png" alt="First Girl" class="section4-image">';
