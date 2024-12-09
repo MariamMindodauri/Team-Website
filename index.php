@@ -56,11 +56,19 @@ include ('data.php');
     ?>
   <!-- end  section4 -->
   
-    <!-- section5 -->
-    <?php 
-      section5($section5);
+   <!-- section5 -->
+   <?php 
+      section5();
     ?>
   <!-- end  section5 -->
+  
+
+    <!-- footer -->
+    <?php 
+      setFooter();
+    ?>
+  <!-- end  footer -->
+  
 
 </body>
 
