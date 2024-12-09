@@ -20,7 +20,6 @@ $navbar1 = [
     ],
     [
         'name' => 'ACCOUNT',
-        'link' => './account.php',
         'submenu' => $logged_in ? [
             [
                 'name' => 'Logout',

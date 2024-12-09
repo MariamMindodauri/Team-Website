@@ -45,42 +45,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             align-items: center; 
             height: 100vh; 
             margin: 0; 
-            background-color: #f4f4f4; 
+            background-color: #FFFFFF; 
         }
         .container {
             background-color: white; 
-            border-radius: 10px; 
+            border: 2px solid #D39B9B; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
             padding: 20px; 
-            width: 300px; 
+            width: 700px; 
+            height: 700px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            box-sizing: border-box; 
+
+            /* Octagon shape using clip-path */
+            clip-path: polygon(
+                30% 0%, 70% 0%, 
+                100% 30%, 100% 70%, 
+                70% 100%, 30% 100%, 
+                0% 70%, 0% 30%
+            );
         }
+
+
         h2 { 
-            color: #00c6a9; 
+            color: #D39B9B; 
             text-align: center; 
             margin-bottom: 20px; 
         }
         input, select {
-            width: 100%; 
+            width: 500px; 
             padding: 10px; 
             margin: 10px 0; 
-            border: 2px solid #00c6a9; 
-            border-radius: 5px; 
+            border: 2px solid #B8B8B8; 
+            border-radius: 40px; 
             box-sizing: border-box; 
+            font-size: 20px; 
+            font-weight: 200;
+            color: #4A4A4A;
         }
         button {
-            width: 100%; 
-            padding: 10px; 
-            background-color: #00c6a9; 
+            width: 200px; 
+            padding: 15px; 
+            background-color: #C4C4C4; 
             border: none; 
             color: white; 
             font-size: 16px; 
-            border-radius: 5px; 
+            border-radius: 40px; 
             cursor: pointer; 
             transition: all 0.3s ease;
             margin-bottom: 3px;
         }
         button:hover {
-            background-color: #009b8f;
+            background-color: #D39B9B;
             transform: scale(0.95);
         }
         button:focus {
@@ -90,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container">
-        <h2>Sign Up</h2>
+        <h2>SIGN UP</h2>
         <form method="POST">
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
